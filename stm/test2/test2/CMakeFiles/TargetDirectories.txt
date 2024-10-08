@@ -1,0 +1,5 @@
+/home/marcos/projects/7semestre/str/stm/test2/test2/CMakeFiles/test2.dir
+/home/marcos/projects/7semestre/str/stm/test2/test2/CMakeFiles/edit_cache.dir
+/home/marcos/projects/7semestre/str/stm/test2/test2/CMakeFiles/rebuild_cache.dir
+/home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+/home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir

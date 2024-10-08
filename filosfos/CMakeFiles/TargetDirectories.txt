@@ -1,0 +1,3 @@
+/home/marcos/projects/7semestre/str/filosfos/CMakeFiles/rebuild_cache.dir
+/home/marcos/projects/7semestre/str/filosfos/CMakeFiles/edit_cache.dir
+/home/marcos/projects/7semestre/str/filosfos/CMakeFiles/project.dir

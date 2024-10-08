@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/marcos/projects/7semestre/str/filosofos/src/main.cpp
+jantar.h
+/home/marcos/projects/7semestre/str/filosofos/src/jantar.h
+
+include/filosofos.h
+mutex
+-
+iostream
+-
+thread
+-
+chrono
+-
+
+include/jantar.h
+vector
+-
+filosofos.h
+include/filosofos.h
+memory
+-
+random
+-
+mutex
+-
+iostream
+-
+thread
+-
+

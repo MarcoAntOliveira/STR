@@ -1,0 +1,3 @@
+/home/marcos/projects/7semestre/str/ex/build/CMakeFiles/rebuild_cache.dir
+/home/marcos/projects/7semestre/str/ex/build/CMakeFiles/edit_cache.dir
+/home/marcos/projects/7semestre/str/ex/build/CMakeFiles/project.dir

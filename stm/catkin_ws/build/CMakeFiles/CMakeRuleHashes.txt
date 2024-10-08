@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+c80a44d54d1eeb3dd643a5853f7f88d0 /home/marcos/projects/stm/catkin_ws/devel/share/roseus/ros/rosserial_stm32/manifest.l
+7e0da56aa8324aeae3f9b939aad9c214 CMakeFiles/clean_test_results

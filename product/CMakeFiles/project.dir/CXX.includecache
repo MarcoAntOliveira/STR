@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/marcos/projects/7semestre/str/product/src/main.cpp
+iostream
+-
+thread
+-
+func.h
+/home/marcos/projects/7semestre/str/product/src/func.h
+
+include/func.h
+mutex
+-
+

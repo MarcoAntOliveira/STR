@@ -1,0 +1,1 @@
+/usr/bin/cc -T/home/marcos/projects/7semestre/str/stm/test3/STM32F103C8Tx_FLASH.ld CMakeFiles/stm32_project.dir/main.c.o -o stm32_project 

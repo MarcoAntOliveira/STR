@@ -1,0 +1,26 @@
+CMakeFiles/test2.dir/Core/Src/system_stm32f1xx.c.obj: \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/Core/Src/system_stm32f1xx.c \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/CMSIS/Include/core_cm3.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/CMSIS/Include/cmsis_version.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/CMSIS/Include/cmsis_compiler.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/CMSIS/Include/cmsis_gcc.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Core/Inc/stm32f1xx_hal_conf.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h \
+ /home/marcos/projects/7semestre/str/stm/test2/test2/cmake/stm32cubemx/../../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
