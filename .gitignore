@@ -39,4 +39,5 @@ build
 /Debug/
 /Release/
 
-/simualtions/venv/
+/venv/
+/escalonator/str-miros-stm32f103/

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/marcos/projects/STR/escalonator/str-miros-stm32f103"/>
+			<item value="/home/marcos/projects/STR/escalonator"/>
+			<item value="/home/marcos/projects/STR/escalonator/consumer-MarcosAntonio/str-miros-stm32f103"/>
+			<item value="/home/marcos/projects/STR/produtor-consumidor"/>
+			<item value="/opt/st/stm32cubeide_1.16.1_2"/>
+		</list>
+	</section>
+</section>

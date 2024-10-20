@@ -1,12 +1,11 @@
-# Corrigindo a adição de patches na legenda e o eixo do gráfico
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
 # Definindo os períodos e tempos de execução das tarefas
 tasks = {
-    'T1': {'period': 4, 'execution': 1, 'color': 'red'},
-    'T2': {'period': 5, 'execution': 2, 'color': 'blue'},
-    'T3': {'period': 8, 'execution': 3, 'color': 'green'}
+    'T1': {'period': 4, 'execution': 1, 'color': 'red', 'start_time': 0},  # T1 começa no tempo 0
+    'T2': {'period': 5, 'execution': 2, 'color': 'blue', 'start_time': 2},  # T2 começa no tempo 0
+    'T3': {'period': 8, 'execution': 3, 'color': 'green', 'start_time': 3}  # T3 começa no tempo 0
 }
 
 # Definindo o horizonte de tempo para o gráfico
@@ -20,10 +19,13 @@ for i, (task_name, task_info) in enumerate(tasks.items()):
     period = task_info['period']
     execution_time = task_info['execution']
     color = task_info['color']
+    start_time = task_info['start_time']
     
-    # Distribuir as execuções ao longo do tempo
-    for start_time in range(0, time_horizon, period):
-        ax.broken_barh([(start_time, execution_time)], (10 * (i+1), 9), facecolors=(color))
+    # Distribuir as execuções ao longo do tempo, de acordo com o período
+    current_time = start_time  # cada tarefa inicia no seu próprio tempo de início
+    while current_time < time_horizon:
+        ax.broken_barh([(current_time, execution_time)], (10 * (i+1), 9), facecolors=(color))
+        current_time += period  # a próxima execução ocorre no próximo período
 
 # Configurações do gráfico
 ax.set_ylim(5, 40)
