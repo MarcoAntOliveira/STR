@@ -75,3 +75,18 @@ Caused by: java.io.FileNotFoundException: /home/marcos/projects/STR/escalonator/
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-10-20 10:22:54.244
 !MESSAGE Indexed 'str-miros-stm32f103' (69 sources, 82 headers) in 2.17 sec: 4,039 declarations; 15,330 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.01%)
+!SESSION 2024-10-22 15:51:44.118 -----------------------------------------------
+eclipse.buildId=Version 1.16.1
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-10-22 15:52:05.992
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-10-22 15:52:05.993
+!MESSAGE Log4j2 initialized with config file /home/marcos/projects/STR/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-10-22 15:52:09.585
+!MESSAGE Started RMI Server, listening on port 41337
