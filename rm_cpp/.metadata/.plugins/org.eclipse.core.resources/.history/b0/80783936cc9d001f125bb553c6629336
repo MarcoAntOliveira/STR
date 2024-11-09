@@ -1,0 +1,46 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdint.h>  // Tipos padrão do C
+
+#ifdef __cplusplus
+}
+#endif
+
+// Defina classes C++ fora do bloco extern "C"
+#ifdef __cplusplus
+
+#include <stdint.h>  // Use <stdint.h> em vez de <cstdint>
+#include "sem_mutex.h"
+
+class Tarefa {
+public:
+    Tarefa(uint8_t i, uint8_t p, uint32_t prio, uint8_t periodo)
+        : id(i), prioridade(p), proxima_execucao(prio), periodo_ms(periodo), ativa(true) {}
+
+    void atualizar_proxima_execucao(uint8_t periodo_ms, sem_mutex_t *m);
+
+    bool ativa;
+    uint8_t nucleo;  // Define o núcleo associado à tarefa
+
+private:
+    uint8_t id;
+    uint8_t prioridade;
+    uint32_t proxima_execucao;
+    uint8_t periodo_ms;  // Adiciona periodo_ms como um membro de Tarefa
+};
+
+class Escalonador {
+public:
+    void adicionarTarefa(const Tarefa& tarefa);
+    Tarefa* obterProximaTarefa(uint8_t nucleo);
+    void balancearCarga();
+    bool estaVazia() const;
+
+private:
+    Tarefa tarefas[10];  // Array fixo, altere o tamanho conforme necessário
+    uint8_t num_tarefas = 0; // Contador simples de tarefas
+};
+
+#endif  // RM_H

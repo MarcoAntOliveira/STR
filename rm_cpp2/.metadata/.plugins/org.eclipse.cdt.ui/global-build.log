@@ -1,0 +1,310 @@
+18:29:58 **** Clean-only build of configuration Debug for project str-miros-stm32f103 ****
+make -j4 clean 
+rm -rf ./Startup/startup_stm32f103c8tx.d ./Startup/startup_stm32f103c8tx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/miros.cyclo ./Src/miros.d ./Src/miros.o ./Src/miros.su ./Src/rm.cyclo ./Src/rm.d ./Src/rm.o ./Src/rm.su ./Src/sem.cyclo ./Src/sem.d ./Src/sem.o ./Src/sem.su ./Src/sem_mutex.cyclo ./Src/sem_mutex.d ./Src/sem_mutex.o ./Src/sem_mutex.su ./Src/stm32f1xx_hal_msp.cyclo ./Src/stm32f1xx_hal_msp.d ./Src/stm32f1xx_hal_msp.o ./Src/stm32f1xx_hal_msp.su ./Src/stm32f1xx_it.cyclo ./Src/stm32f1xx_it.d ./Src/stm32f1xx_it.o ./Src/stm32f1xx_it.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f1xx.cyclo ./Src/system_stm32f1xx.d ./Src/system_stm32f1xx.o ./Src/system_stm32f1xx.su
+rm -rf ./Drivers/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.d ./Drivers/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.o ./Drivers/STM32F1xx_HAL_Driver/Src/Legacy/stm32f1xx_hal_can.su
+rm -rf ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_adc_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cec.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_crc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dac_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_eth.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_hcd.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2s.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_irda.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_iwdg.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_mmc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_msp_template.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_msp_template.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_msp_template.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_msp_template.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nand.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_nor.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pccard.su
+rm -rf ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pcd_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sd.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_smartcard.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_sram.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_timebase_rtc_alarm_template.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_timebase_rtc_alarm_template.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_timebase_rtc_alarm_template.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_timebase_rtc_alarm_template.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_timebase_tim_template.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_timebase_tim_template.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_timebase_tim_template.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_timebase_tim_template.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_wwdg.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_adc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_crc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_crc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_crc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_crc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dac.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dac.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dac.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dac.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.d
+rm -rf ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_i2c.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rtc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rtc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rtc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rtc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_sdmmc.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_tim.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usb.su ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.cyclo ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.d ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.o ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.su
+rm -rf default.size.stdout str-miros-stm32f103.elf str-miros-stm32f103.list str-miros-stm32f103.map
+ 
+18:29:59 **** Build of configuration Debug for project str-miros-stm32f103 ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-g++ "../Src/escalonador.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Drivers/CMSIS/Include" -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/escalonador.d" -MT"Src/escalonador.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/escalonador.o"
+arm-none-eabi-g++ "../Src/fila_prioridades.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Drivers/CMSIS/Include" -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/fila_prioridades.d" -MT"Src/fila_prioridades.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/fila_prioridades.o"
+arm-none-eabi-g++ "../Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Drivers/CMSIS/Include" -I"/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/escalonador.cpp:1:10: fatal error: Escalonador.h: No such file or directory
+    1 | #include "Escalonador.h"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:56: Src/escalonador.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/fila_prioridades.cpp: In constructor 'FilaPrioridade::FilaPrioridade()':
+../Src/fila_prioridades.cpp:6:45: error: no matching function for call to 'Tarefa::Tarefa()'
+    6 | FilaPrioridade::FilaPrioridade() : tamanho(0) {}
+      |                                             ^
+In file included from /home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/fila_prioridades.h:4,
+                 from ../Src/fila_prioridades.cpp:1:
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:14:5: note: candidate: 'Tarefa::Tarefa(uint8_t, uint8_t, uint32_t, uint8_t)'
+   14 |     Tarefa(uint8_t i, uint8_t p, uint32_t prio, uint8_t periodo);
+      |     ^~~~~~
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:14:5: note:   candidate expects 4 arguments, 0 provided
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note: candidate: 'constexpr Tarefa::Tarefa(const Tarefa&)'
+    6 | class Tarefa {
+      |       ^~~~~~
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note:   candidate expects 1 argument, 0 provided
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note: candidate: 'constexpr Tarefa::Tarefa(Tarefa&&)'
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note:   candidate expects 1 argument, 0 provided
+../Src/fila_prioridades.cpp:6:45: error: no matching function for call to 'Tarefa::Tarefa()'
+    6 | FilaPrioridade::FilaPrioridade() : tamanho(0) {}
+      |                                             ^
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:14:5: note: candidate: 'Tarefa::Tarefa(uint8_t, uint8_t, uint32_t, uint8_t)'
+   14 |     Tarefa(uint8_t i, uint8_t p, uint32_t prio, uint8_t periodo);
+      |     ^~~~~~
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:14:5: note:   candidate expects 4 arguments, 0 provided
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note: candidate: 'constexpr Tarefa::Tarefa(const Tarefa&)'
+    6 | class Tarefa {
+      |       ^~~~~~
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note:   candidate expects 1 argument, 0 provided
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note: candidate: 'constexpr Tarefa::Tarefa(Tarefa&&)'
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note:   candidate expects 1 argument, 0 provided
+../Src/fila_prioridades.cpp: In member function 'void FilaPrioridade::adicionar(const Tarefa&)':
+../Src/fila_prioridades.cpp:11:84: error: exception handling disabled, use '-fexceptions' to enable
+   11 |         throw std::runtime_error("Capacidade máxima da fila de prioridade atingida");
+      |                                                                                    ^
+make: *** [Src/subdir.mk:56: Src/fila_prioridades.o] Error 1
+../Src/main.cpp: In function 'int main()':
+../Src/main.cpp:18:9: error: 'sem_create' was not declared in this scope
+   18 |     m = sem_create(1);  // Mutex inicializado com valor 1 para simular um mutex binário
+      |         ^~~~~~~~~~
+../Src/main.cpp:25:17: error: use of deleted function 'Escalonador::Escalonador()'
+   25 |     Escalonador escalonador;
+      |                 ^~~~~~~~~~~
+In file included from ../Src/main.cpp:7:
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:20:7: note: 'Escalonador::Escalonador()' is implicitly deleted because the default definition would be ill-formed:
+   20 | class Escalonador {
+      |       ^~~~~~~~~~~
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:20:7: error: no matching function for call to 'Tarefa::Tarefa()'
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:14:5: note: candidate: 'Tarefa::Tarefa(uint8_t, uint8_t, uint32_t, uint8_t)'
+   14 |     Tarefa(uint8_t i, uint8_t p, uint32_t prio, uint8_t periodo);
+      |     ^~~~~~
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:14:5: note:   candidate expects 4 arguments, 0 provided
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note: candidate: 'constexpr Tarefa::Tarefa(const Tarefa&)'
+    6 | class Tarefa {
+      |       ^~~~~~
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note:   candidate expects 1 argument, 0 provided
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note: candidate: 'constexpr Tarefa::Tarefa(Tarefa&&)'
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/rm.h:6:7: note:   candidate expects 1 argument, 0 provided
+../Src/main.cpp:30:18: error: cannot convert 'sem_mutex_t*' to 'sem_t*'
+   30 |         sem_wait(m);
+      |                  ^
+      |                  |
+      |                  sem_mutex_t*
+In file included from ../Src/main.cpp:8:
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/sem.h:14:22: note:   initializing argument 1 of 'void sem_wait(sem_t*, sem_mutex_t*)'
+   14 | void sem_wait(sem_t *s, sem_mutex_t *m);
+      |               ~~~~~~~^
+../Src/main.cpp:36:20: error: cannot convert 'sem_mutex_t*' to 'sem_t*'
+   36 |         sem_signal(m);
+      |                    ^
+      |                    |
+      |                    sem_mutex_t*
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/sem.h:13:24: note:   initializing argument 1 of 'void sem_signal(sem_t*, sem_mutex_t*)'
+   13 | void sem_signal(sem_t *s, sem_mutex_t *m);
+      |                 ~~~~~~~^
+../Src/main.cpp:41:37: error: no match for 'operator<=' (operand types are 'uint32_t' {aka 'long unsigned int'} and 'std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long long int, std::ratio<1, 1000000000> > >')
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~
+      |                    |                   |
+      |                    |                   std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long long int, std::ratio<1, 1000000000> > >
+      |                    uint32_t {aka long unsigned int}
+In file included from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/string:47,
+                 from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/locale_classes.h:40,
+                 from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/ios_base.h:41,
+                 from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/ios:42,
+                 from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/ostream:38,
+                 from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/iostream:39,
+                 from ../Src/main.cpp:3:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:472:5: note: candidate: 'template<class _Iterator> bool std::operator<=(const reverse_iterator<_Iterator>&, const reverse_iterator<_Iterator>&)'
+  472 |     operator<=(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:472:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:516:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator<=(const reverse_iterator<_Iterator>&, const reverse_iterator<_IteratorR>&)'
+  516 |     operator<=(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:516:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::reverse_iterator<_Iterator>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:1711:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator<=(const move_iterator<_IteratorL>&, const move_iterator<_IteratorR>&)'
+ 1711 |     operator<=(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:1711:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::move_iterator<_IteratorL>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:1773:5: note: candidate: 'template<class _Iterator> bool std::operator<=(const move_iterator<_IteratorL>&, const move_iterator<_IteratorL>&)'
+ 1773 |     operator<=(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:1773:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::move_iterator<_IteratorL>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+In file included from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_algobase.h:64,
+                 from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/string:50:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_pair.h:682:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator<=(const pair<_T1, _T2>&, const pair<_T1, _T2>&)'
+  682 |     operator<=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_pair.h:682:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::pair<_T1, _T2>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+In file included from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/string:53:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/basic_string.h:3775:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const __cxx11::basic_string<_CharT, _Traits, _Alloc>&, const __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+ 3775 |     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/basic_string.h:3775:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/basic_string.h:3788:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const __cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)'
+ 3788 |     operator<=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/basic_string.h:3788:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/basic_string.h:3800:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<=(const _CharT*, const __cxx11::basic_string<_CharT, _Traits, _Alloc>&)'
+ 3800 |     operator<=(const _CharT* __lhs,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/basic_string.h:3800:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const _CharT*' and 'long unsigned int'
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+In file included from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/deque:64,
+                 from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/queue:60,
+                 from ../Src/main.cpp:4:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_deque.h:2352:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator<=(const deque<_Tp, _Alloc>&, const deque<_Tp, _Alloc>&)'
+ 2352 |     operator<=(const deque<_Tp, _Alloc>& __x, const deque<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_deque.h:2352:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::deque<_Tp, _Alloc>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+In file included from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/vector:64,
+                 from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/queue:61:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_vector.h:2093:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator<=(const vector<_Tp, _Alloc>&, const vector<_Tp, _Alloc>&)'
+ 2093 |     operator<=(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_vector.h:2093:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::vector<_Tp, _Alloc>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+In file included from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/queue:64:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_queue.h:420:5: note: candidate: 'template<class _Tp, class _Seq> bool std::operator<=(const queue<_Tp, _Seq>&, const queue<_Tp, _Seq>&)'
+  420 |     operator<=(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_queue.h:420:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::queue<_Tp, _Seq>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+In file included from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/std_thread.h:39,
+                 from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/thread:43,
+                 from ../Src/main.cpp:5:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/tuple:1563:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator<=(const tuple<_Elements ...>&, const tuple<_Types ...>&)'
+ 1563 |     operator<=(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/tuple:1563:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::tuple<_Elements ...>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+In file included from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/std_thread.h:43:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/unique_ptr.h:906:5: note: candidate: 'template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<=(const unique_ptr<_Tp, _Dp>&, const unique_ptr<_Up, _Ep>&)'
+  906 |     operator<=(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/unique_ptr.h:906:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::unique_ptr<_Tp, _Dp>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/unique_ptr.h:914:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator<=(const unique_ptr<_Tp, _Dp>&, nullptr_t)'
+  914 |     operator<=(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/unique_ptr.h:914:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::unique_ptr<_Tp, _Dp>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/unique_ptr.h:921:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator<=(nullptr_t, const unique_ptr<_Tp, _Dp>&)'
+  921 |     operator<=(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/unique_ptr.h:921:5: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   'std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long long int, std::ratio<1, 1000000000> > >' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+In file included from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/chrono:39,
+                 from ../Src/main.cpp:2:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/chrono.h:846:7: note: candidate: 'template<class _Rep1, class _Period1, class _Rep2, class _Period2> constexpr bool std::chrono::operator<=(const duration<_Rep1, _Period1>&, const duration<_Rep2, _Period2>&)'
+  846 |       operator<=(const duration<_Rep1, _Period1>& __lhs,
+      |       ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/chrono.h:846:7: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::chrono::duration<_Rep1, _Period1>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/chrono.h:1172:7: note: candidate: 'template<class _Clock, class _Dur1, class _Dur2> constexpr bool std::chrono::operator<=(const time_point<_Clock, _Duration1>&, const time_point<_Clock, _Duration2>&)'
+ 1172 |       operator<=(const time_point<_Clock, _Dur1>& __lhs,
+      |       ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/chrono.h:1172:7: note:   template argument deduction/substitution failed:
+../Src/main.cpp:41:40: note:   mismatched types 'const std::chrono::time_point<_Clock, _Duration1>' and 'uint32_t' {aka 'long unsigned int'}
+   41 |         if (tarefa.proxima_execucao <= agora) {
+      |                                        ^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/thread:81:3: note: candidate: 'bool std::operator<=(thread::id, thread::id)'
+   81 |   operator<=(thread::id __x, thread::id __y) noexcept
+      |   ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/thread:81:25: note:   no known conversion for argument 1 from 'uint32_t' {aka 'long unsigned int'} to 'std::thread::id'
+   81 |   operator<=(thread::id __x, thread::id __y) noexcept
+      |              ~~~~~~~~~~~^~~
+../Src/main.cpp:42:13: error: 'executar_tarefa' was not declared in this scope
+   42 |             executar_tarefa(tarefa);  // Executa a tarefa
+      |             ^~~~~~~~~~~~~~~
+../Src/main.cpp:47:18: error: cannot convert 'sem_mutex_t*' to 'sem_t*'
+   47 |         sem_wait(m);
+      |                  ^
+      |                  |
+      |                  sem_mutex_t*
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/sem.h:14:22: note:   initializing argument 1 of 'void sem_wait(sem_t*, sem_mutex_t*)'
+   14 | void sem_wait(sem_t *s, sem_mutex_t *m);
+      |               ~~~~~~~^
+../Src/main.cpp:49:20: error: cannot convert 'sem_mutex_t*' to 'sem_t*'
+   49 |         sem_signal(m);
+      |                    ^
+      |                    |
+      |                    sem_mutex_t*
+/home/marcos/projects/rm_cpp2/str-miros-stm32f103/Inc/sem.h:13:24: note:   initializing argument 1 of 'void sem_signal(sem_t*, sem_mutex_t*)'
+   13 | void sem_signal(sem_t *s, sem_mutex_t *m);
+      |                 ~~~~~~~^
+../Src/main.cpp:52:21: error: 'class Escalonador' has no member named 'balancearCarga'
+   52 |         escalonador.balancearCarga();
+      |                     ^~~~~~~~~~~~~~
+In file included from /opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/string:48:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_function.h: In instantiation of 'constexpr bool std::greater<_Tp>::operator()(const _Tp&, const _Tp&) const [with _Tp = Tarefa]':
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/predefined_ops.h:196:23:   required from 'bool __gnu_cxx::__ops::_Iter_comp_val<_Compare>::operator()(_Iterator, _Value&) [with _Iterator = __gnu_cxx::__normal_iterator<Tarefa*, std::vector<Tarefa> >; _Value = Tarefa; _Compare = std::greater<Tarefa>]'
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_heap.h:140:48:   required from 'void std::__push_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare&) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<Tarefa*, vector<Tarefa> >; _Distance = int; _Tp = Tarefa; _Compare = __gnu_cxx::__ops::_Iter_comp_val<greater<Tarefa> >]'
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_heap.h:216:23:   required from 'void std::push_heap(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<Tarefa*, vector<Tarefa> >; _Compare = greater<Tarefa>]'
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_queue.h:757:18:   required from 'void std::priority_queue<_Tp, _Sequence, _Compare>::emplace(_Args&& ...) [with _Args = {int, int, int, int}; _Tp = Tarefa; _Sequence = std::vector<Tarefa>; _Compare = std::greater<Tarefa>]'
+../Src/main.cpp:21:29:   required from here
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_function.h:398:20: error: no match for 'operator>' (operand types are 'const Tarefa' and 'const Tarefa')
+  398 |       { return __x > __y; }
+      |                ~~~~^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:465:5: note: candidate: 'template<class _Iterator> bool std::operator>(const reverse_iterator<_Iterator>&, const reverse_iterator<_Iterator>&)'
+  465 |     operator>(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:465:5: note:   template argument deduction/substitution failed:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_function.h:398:20: note:   'const Tarefa' is not derived from 'const std::reverse_iterator<_Iterator>'
+  398 |       { return __x > __y; }
+      |                ~~~~^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:510:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator>(const reverse_iterator<_Iterator>&, const reverse_iterator<_IteratorR>&)'
+  510 |     operator>(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:510:5: note:   template argument deduction/substitution failed:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_function.h:398:20: note:   'const Tarefa' is not derived from 'const std::reverse_iterator<_Iterator>'
+  398 |       { return __x > __y; }
+      |                ~~~~^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:1721:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator>(const move_iterator<_IteratorL>&, const move_iterator<_IteratorR>&)'
+ 1721 |     operator>(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:1721:5: note:   template argument deduction/substitution failed:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_function.h:398:20: note:   'const Tarefa' is not derived from 'const std::move_iterator<_IteratorL>'
+  398 |       { return __x > __y; }
+      |                ~~~~^~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:1780:5: note: candidate: 'template<class _Iterator> bool std::operator>(const move_iterator<_IteratorL>&, const move_iterator<_IteratorL>&)'
+ 1780 |     operator>(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_iterator.h:1780:5: note:   template argument deduction/substitution failed:
+/opt/st/stm32cubeide_1.16.1_2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_function.h:398:20: note:   'const Tarefa' is not derived from 'const std::move_iterator<_IteratorL>'
+  398 |       { return __x > __y; }
+      |                ~~~~^~~~~
+make: *** [Src/subdir.mk:56: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.

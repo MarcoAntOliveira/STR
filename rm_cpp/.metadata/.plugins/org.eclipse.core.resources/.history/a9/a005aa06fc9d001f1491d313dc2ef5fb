@@ -1,0 +1,57 @@
+
+#include <stdint.h>
+#include "miros.h"
+#include "qassert.h"
+#include "sem.h"
+#include "sem_mutex.h"
+
+
+
+// Função de espera (down/P) - decrementa o semáforo e bloqueia se o valor for zero
+void sem_signal(sem_t *s, sem_mutex_t *m) {
+	mutex_enter_critical(m); // Garante exclusão mútua
+
+    // Bloqueia se não houver recursos disponíveis (empty == 0)
+    while (s->empty == 0){
+        mutex_exit_critical(m);   // Sai da região crítica antes de bloquear
+        OS_delay(TICKS_PER_SEC / 10);  // Evita busy-waiting
+        mutex_enter_critical(m);  // Reentra na região crítica
+    }
+
+    s->count++;
+	s->full++;  // Incrementa o número de itens no buffer (buffer cheio)
+	s->empty--; // Decrementa o número de espaços vazios no buffer
+
+
+    mutex_exit_critical(m);  // Fim da região crítica
+}
+
+// Função de sinalização (up/V) - incrementa o semáforo e desbloqueia threads aguardando
+void sem_wait(sem_t *s, sem_mutex_t *m) {
+    mutex_enter_critical(m);  // Garante exclusão mútua
+    while ( s -> full == 0) {
+           mutex_exit_critical(m);   // Sai da região crítica antes de bloquear
+           OS_delay(TICKS_PER_SEC / 10);  // Evita busy-waiting
+           mutex_enter_critical(m);  // Reentra na região crítica
+       }
+	s->count--;// Se count < BUFFER_SIZE, há espaço no buffer
+	s->full--;  // Decrementa o número de itens no buffer
+	s->empty++; // Incrementa o número de espaços vazios no buffer
+
+    mutex_exit_critical(m);  // Fim da região crítica
+}
+
+void init_semaphores_and_mutexes(sem_t *buffer_empty, sem_t *buffer_full,
+sem_mutex_t *m, BUFFER_SIZE){
+    // Inicializa o semáforo do buffer
+    buffer_empty->count = BUFFER_SIZE;  // Espaço vazio igual ao tamanho total do buffer
+    buffer_empty->full = 0;             // Nenhum item no buffer no início
+    buffer_empty->empty = BUFFER_SIZE;  // Buffer está completamente vazio
+
+    buffer_full->count = 0;             // Nenhum item no buffer no início
+    buffer_full->full = 0;              // Nenhum item completo
+    buffer_full->empty = BUFFER_SIZE;   // Espaço máximo disponível
+
+    // Inicializa o mutex
+    m->value = 1;  // Mutex começa desbloqueado (disponível para uso)
+}

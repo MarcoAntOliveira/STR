@@ -1,0 +1,32 @@
+#ifndef RM_H
+#define RM_H
+#include <ostream>
+#include <queue>
+#include <vector>
+#include <chrono>
+#include <thread>
+#include <functional>
+
+struct Tarefa {
+    int id;
+    int periodo_ms;
+    std::chrono::steady_clock::time_point proxima_execucao;
+
+    Tarefa(int i, int p) : id(i), periodo_ms(p) {
+        proxima_execucao = std::chrono::steady_clock::now() + std::chrono::milliseconds(periodo_ms);
+    }
+
+    // Definimos a ordem de prioridade baseada no próximo tempo de execução
+    bool operator>(const Tarefa& outra) const {
+        return proxima_execucao > outra.proxima_execucao;
+    }
+
+    // Atualiza o próximo tempo de execução
+    void atualizar_proxima_execucao() {
+        proxima_execucao += std::chrono::milliseconds(periodo_ms);
+    }
+};
+
+// Função para processar a tarefa
+void executar_tarefa(const Tarefa& tarefa);
+#endif /* RM_H */

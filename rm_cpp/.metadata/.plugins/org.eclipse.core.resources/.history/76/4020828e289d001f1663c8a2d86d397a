@@ -1,0 +1,67 @@
+#ifndef RM_H
+#define RM_H
+
+
+#include <vector>
+#include <chrono>
+#include <thread>
+#include <functional>
+#include <algorithm>
+
+
+
+struct Tarefa {
+    u_int8_t id;
+    u_int8_t periodo_ms;
+    std::chrono::steady_clock::time_point proxima_execucao;
+    u_int8_t prioridade;
+
+    Tarefa(u_int8_t i, u_int8_t p) : id(i), periodo_ms(p) {
+        proxima_execucao = std::chrono::steady_clock::now() + std::chrono::milliseconds(periodo_ms);
+    }
+
+    // Definimos a ordem de prioridade baseada no próximo tempo de execução
+    bool operator>(const Tarefa& outra) const {
+        return proxima_execucao > outra.proxima_execucao;
+    }
+
+    // Atualiza o próximo tempo de execução
+    void atualizar_proxima_execucao() {
+        proxima_execucao += std::chrono::milliseconds(periodo_ms);
+    }
+};
+
+// Função para processar a tarefa
+void executar_tarefa(const Tarefa& tarefa);
+
+// Lista de prioridades customizada
+class PriorityList {
+private:
+    std::vector<Tarefa> tarefas;
+
+public:
+    // Adiciona uma tarefa na lista de acordo com a prioridade
+    void adicionarTarefa(const Tarefa& tarefa) {
+        tarefas.push_back(tarefa);
+        // Ordena as tarefas com base na prioridade (prioridade alta primeiro)
+        std::sort(tarefas.begin(), tarefas.end(), [](const Tarefa& a, const Tarefa& b) {
+            return a.prioridade > b.prioridade; // Prioridade alta tem precedência
+        });
+    }
+
+    // Retorna a próxima tarefa com maior prioridade e remove da lista
+    Tarefa obterProximaTarefa() {
+        if (!tarefas.empty()) {
+            Tarefa tarefa = tarefas.front(); // Maior prioridade na frente
+            tarefas.erase(tarefas.begin());
+            return tarefa;
+        }
+        return Tarefa(-1, "Nenhuma tarefa disponível");
+    }
+
+    // Verifica se a lista está vazia
+    bool estaVazia() const {
+        return tarefas.empty();
+    }
+};
+#endif /* RM_H */

@@ -1,0 +1,28 @@
+#ifndef RM_H
+#define RM_H
+
+#include <stdint.h>  // Use <stdint.h> em vez de <cstdint>
+
+class Tarefa {
+    uint8_t id;
+    uint8_t prioridade;
+    uint32_t proxima_execucao;
+
+    Tarefa(uint8_t i, uint8_t p, uint32_t prio) : id(i), prioridade(p), proxima_execucao(prio) {}
+
+    void atualizar_proxima_execucao();
+};
+
+
+class Escalonador {
+public:
+    void adicionarTarefa(const Tarefa& tarefa);
+    Tarefa obterProximaTarefa();
+    bool estaVazia() const;
+
+private:
+    Tarefa tarefas[10];  // Array fixo, altere o tamanho conforme necessário
+    int num_tarefas = 0;
+};
+
+#endif  // RM_H

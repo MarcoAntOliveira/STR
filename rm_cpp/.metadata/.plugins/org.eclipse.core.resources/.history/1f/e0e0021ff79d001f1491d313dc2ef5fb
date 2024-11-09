@@ -1,0 +1,36 @@
+#include <stdint.h>
+#include "miros.h"
+#include "rm.h"
+
+
+
+int main() {
+    // Criação da fila de prioridades com comparação invertida para "menor período -> maior prioridade"
+    std::priority_queue<Tarefa, std::vector<Tarefa>, std::greater<Tarefa>> fila_prioridades;
+
+    // Adiciona as tarefas com diferentes períodos
+    fila_prioridades.emplace(1, 100); // Tarefa com maior prioridade
+    fila_prioridades.emplace(2, 200);
+    fila_prioridades.emplace(3, 300); // Tarefa com menor prioridade
+
+    // Simula um loop de escalonamento
+    while (true) {
+        auto agora = std::chrono::steady_clock::now();
+        Tarefa tarefa = fila_prioridades.top(); // Pega a tarefa de maior prioridade
+        fila_prioridades.pop();
+
+        // Verifica se é o momento de executar a tarefa
+        if (tarefa.proxima_execucao <= agora) {
+            executar_tarefa(tarefa);
+            tarefa.atualizar_proxima_execucao();
+        }
+
+        // Insere a tarefa de volta na fila com o tempo atualizado
+        fila_prioridades.push(tarefa);
+
+        // Simula um pequeno intervalo de espera no escalonador
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+
+    return 0;
+}

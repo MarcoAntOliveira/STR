@@ -1,0 +1,42 @@
+// rm.h
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdint.h>  // Tipos padrão do C
+
+#ifdef __cplusplus
+}
+#endif
+
+// Defina classes C++ fora do bloco extern "C"
+#ifdef __cplusplus
+
+
+// Classe Tarefa
+class Tarefa {
+public:
+    Tarefa(uint8_t i, uint8_t p, uint8_t prio, uint8_t nucleo_dest);
+    void atualizar_proxima_execucao();
+
+    std::atomic<bool> ativa;
+    uint8_t id;
+    uint8_t periodo_ms;
+    uint8_t prioridade;
+    uint8_t nucleo;
+    std::atomic<uint32_t> proxima_execucao;
+};
+
+// Classe Escalonador
+class Escalonador {
+public:
+    void adicionarTarefa(const Tarefa& tarefa);
+    Tarefa* obterProximaTarefa(uint8_t nucleo);
+    void balancearCarga();
+
+private:
+    Tarefa tarefas[20];
+    std::atomic<int> num_tarefas{0};
+};
+
+#endif

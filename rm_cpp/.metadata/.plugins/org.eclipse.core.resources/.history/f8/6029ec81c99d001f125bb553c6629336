@@ -1,0 +1,58 @@
+// escalonador.cpp
+#include "rm.h"
+
+// Construtor da Tarefa, inicializando a execução e o período
+Tarefa::Tarefa(uint8_t i, uint8_t p, uint32_t prio)
+    : id(i), periodo_ms(p), prioridade(prio), ativa(true), nucleo(nucleo_dest) {
+    proxima_execucao.store(HAL_GetTick() + periodo_ms); // Armazena o tempo de execução inicial
+}
+
+// Método para atualizar o próximo tempo de execução da tarefa
+void Tarefa::atualizar_proxima_execucao() {
+    proxima_execucao.fetch_add(periodo_ms); // Incremento atômico
+}
+
+// Adiciona uma nova tarefa à lista de tarefas do escalonador
+void Escalonador::adicionarTarefa(const Tarefa& tarefa) {
+    int index = num_tarefas.fetch_add(1); // Incremento atômico do índice
+    if (index < 20) {
+        tarefas[index] = tarefa;
+    }
+}
+
+// Obtém a próxima tarefa com base na prioridade e no núcleo
+Tarefa* Escalonador::obterProximaTarefa(uint8_t nucleo) {
+    Tarefa* tarefa_selecionada = nullptr;
+
+    for (int i = 0; i < num_tarefas.load(); ++i) {
+        if (tarefas[i].nucleo == nucleo && tarefas[i].ativa.load() &&
+            (tarefa_selecionada == nullptr || tarefas[i].prioridade > tarefa_selecionada->prioridade)) {
+            tarefa_selecionada = &tarefas[i];
+        }
+    }
+    return tarefa_selecionada;
+}
+
+// Balanceia a carga de tarefas entre núcleos
+void Escalonador::balancearCarga() {
+    int carga_nucleo1 = 0, carga_nucleo2 = 0;
+
+    for (int i = 0; i < num_tarefas.load(); ++i) {
+        if (tarefas[i].nucleo == 0) {
+            carga_nucleo1++;
+        } else {
+            carga_nucleo2++;
+        }
+    }
+
+    // Rebalanceamento de carga simples entre os núcleos
+    if (carga_nucleo1 > carga_nucleo2) {
+        for (int i = 0; i < num_tarefas.load(); ++i) {
+            if (tarefas[i].nucleo == 0 && carga_nucleo1 > carga_nucleo2) {
+                tarefas[i].nucleo = 1;
+                carga_nucleo1--;
+                carga_nucleo2++;
+            }
+        }
+    }
+}

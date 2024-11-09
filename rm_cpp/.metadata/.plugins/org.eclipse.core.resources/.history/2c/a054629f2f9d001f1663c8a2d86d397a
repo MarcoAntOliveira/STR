@@ -1,0 +1,35 @@
+#ifndef RM_H
+#define RM_H
+
+#include <stdint.h>  // Use <stdint.h> em vez de <cstdint>
+
+struct Tarefa {
+    uint8_t id;
+    uint8_t periodo_ms;
+    uint32_t proxima_execucao;  // Armazena o timestamp de execução
+    uint8_t prioridade;
+
+    Tarefa(uint8_t i, uint8_t p, uint8_t prio)
+        : id(i), periodo_ms(p), prioridade(prio), proxima_execucao(0) {}
+
+    bool operator>(const Tarefa& outra) const {
+        return proxima_execucao > outra.proxima_execucao;
+    }
+
+    void atualizar_proxima_execucao() {
+        proxima_execucao += periodo_ms;
+    }
+};
+
+class Escalonador {
+public:
+    void adicionarTarefa(const Tarefa& tarefa);
+    Tarefa obterProximaTarefa();
+    bool estaVazia() const;
+
+private:
+    Tarefa tarefas[10];  // Array fixo, altere o tamanho conforme necessário
+    int num_tarefas = 0;
+};
+
+#endif  // RM_H
