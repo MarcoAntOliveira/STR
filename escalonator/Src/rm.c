@@ -1,78 +1,102 @@
-#include <stdio.h>
-#include <pthread.h>
-#include <unistd.h>
-#include <stdlib.h>
 
-#define NUM_TAREFAS 3
 
-// Estrutura para definir as tarefas
+#define BUFFER_SIZE 5
+
 typedef struct {
     int id;
-    int periodo;  // Tempo de período da tarefa
-    int tempo_exec; // Tempo de execução da tarefa
-    int restante_exec; // Tempo restante de execução da tarefa
-    pthread_t thread_id;
+    int prioridade;
+    int periodo;
+    int restante_exec;
 } Tarefa;
 
-pthread_mutex_t lock; // Mutex para proteger as seções críticas
+typedef struct {
+    Tarefa* tarefas[BUFFER_SIZE];
+    int size;
+} FilaPrioridade;
 
-// Função que cada tarefa executará
-void* executar_tarefa(void* arg) {
-    Tarefa* tarefa = (Tarefa*)arg;
-    while (1) {
-        pthread_mutex_lock(&lock); // Proteger o acesso
-        if (tarefa->restante_exec > 0) {
-            tarefa->restante_exec--;
-            printf("Executando tarefa %d\n", tarefa->id);
+// Contadores atômicos para o buffer
+atomic_int buffer_empty = BUFFER_SIZE;
+atomic_int buffer_full = 0;
+
+// Inicializar fila de prioridade
+void initFila(FilaPrioridade* fila) {
+    fila->size = 0;
+}
+
+// Inserir uma tarefa na fila com base na prioridade
+void inserirTarefa(FilaPrioridade* fila, Tarefa* tarefa) {
+    // Aguarda espaço no buffer
+    while (atomic_load(&buffer_empty) <= 0);
+
+    // Decrementa buffer_empty de forma atômica
+    atomic_fetch_sub(&buffer_empty, 1);
+
+    int i = fila->size++;
+    fila->tarefas[i] = tarefa;
+
+    // Realoca o item na posição correta baseado na prioridade
+    while (i > 0 && fila->tarefas[i]->prioridade > fila->tarefas[(i - 1) / 2]->prioridade) {
+        Tarefa* temp = fila->tarefas[i];
+        fila->tarefas[i] = fila->tarefas[(i - 1) / 2];
+        fila->tarefas[(i - 1) / 2] = temp;
+        i = (i - 1) / 2;
+    }
+
+    // Incrementa buffer_full de forma atômica
+    atomic_fetch_add(&buffer_full, 1);
+}
+
+Tarefa* removerTarefa(FilaPrioridade* fila) {
+    // Aguarda até que haja um item no buffer
+    while (atomic_load(&buffer_full) <= 0);
+
+    // Decrementa buffer_full de forma atômica
+    atomic_fetch_sub(&buffer_full, 1);
+
+    Tarefa* max = fila->tarefas[0];
+    fila->tarefas[0] = fila->tarefas[--fila->size];
+
+    // Realoca o item na posição correta baseado na prioridade
+    int i = 0;
+    while (2 * i + 1 < fila->size) {
+        int maxChild = 2 * i + 1;
+        if (2 * i + 2 < fila->size && fila->tarefas[2 * i + 2]->prioridade > fila->tarefas[2 * i + 1]->prioridade) {
+            maxChild = 2 * i + 2;
         }
-        pthread_mutex_unlock(&lock); // Liberar o mutex
-        sleep(1); // Simula o tempo de execução
-    }
-    return NULL;
-}
+        if (fila->tarefas[i]->prioridade >= fila->tarefas[maxChild]->prioridade) break;
 
-// Função para verificar se uma tarefa está pronta para ser executada
-int tarefa_pronta(Tarefa *tarefa, int tempo_atual) {
-    return (tempo_atual % tarefa->periodo == 0);
-}
-
-int main() {
-    pthread_mutex_init(&lock, NULL);
-
-    Tarefa tarefas[NUM_TAREFAS] = {
-        {1, 3, 1, 1},
-        {2, 5, 2, 2},
-        {3, 8, 3, 3}
-    };
-
-    // Criar threads para cada tarefa
-    for (int i = 0; i < NUM_TAREFAS; i++) {
-        pthread_create(&tarefas[i].thread_id, NULL, executar_tarefa, &tarefas[i]);
+        Tarefa* temp = fila->tarefas[i];
+        fila->tarefas[i] = fila->tarefas[maxChild];
+        fila->tarefas[maxChild] = temp;
+        i = maxChild;
     }
 
-    int tempo_total = 20; // Simulação de tempo
-    int tempo_atual;
+    // Incrementa buffer_empty de forma atômica
+    atomic_fetch_add(&buffer_empty, 1);
+    return max;
+}
 
-    for (tempo_atual = 0; tempo_atual < tempo_total; tempo_atual++) {
-        printf("\nTempo: %d\n", tempo_atual);
 
-        // Iterar sobre as tarefas e verificar se estão prontas
-        pthread_mutex_lock(&lock);
-        for (int i = 0; i < NUM_TAREFAS; i++) {
-            if (tarefa_pronta(&tarefas[i], tempo_atual)) {
-                tarefas[i].restante_exec = tarefas[i].tempo_exec;
-            }
+// Verifica se a tarefa está pronta com base no tempo atual e no período da tarefa
+bool tarefa_pronta(Tarefa* tarefa, int tempo_atual) {
+    // Se o tempo atual é um múltiplo do período, a tarefa está pronta
+    return (tempo_atual % tarefa->periodo) == 0;
+}
+
+// Simula a execução da tarefa
+void executar_tarefa(Tarefa* tarefa) {
+    if (tarefa->restante_exec > 0) {
+        // Simula o consumo de um ciclo de execução
+        tarefa->restante_exec--;
+        printf("Executando tarefa %d, tempo restante: %d\n", tarefa->id, tarefa->restante_exec);
+
+        // Verifica se a tarefa foi concluída
+        if (tarefa->restante_exec == 0) {
+            printf("Tarefa %d concluída.\n", tarefa->id);
+            // Opcional: Reinicializar o tempo de execução restante para simular periodicidade
+            tarefa->restante_exec = tarefa->periodo;
         }
-        pthread_mutex_unlock(&lock);
-
-        sleep(1); // Simula 1 unidade de tempo
     }
-
-    // Finalizar threads (nunca alcançado aqui, mas em uma aplicação real seria necessário)
-    for (int i = 0; i < NUM_TAREFAS; i++) {
-        pthread_join(tarefas[i].thread_id, NULL);
-    }
-
-    pthread_mutex_destroy(&lock);
-    return 0;
 }
+
+

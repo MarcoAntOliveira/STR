@@ -4,26 +4,6 @@
 #include "qassert.h"
 #include "sem.h"
 #include "sem_mutex.h"
-sem_t *empty;
-sem_t *full;
-sem_mutex_t *m;
-
-#define BUFFER_SIZE 5;
-
-void init_semaphores_and_mutexes(sem_t *buffer_empty, sem_t *buffer_full,
-sem_mutex_t *m){
-    // Inicializa o semáforo do buffer
-    buffer_empty->count = BUFFER_SIZE;  // Espaço vazio igual ao tamanho total do buffer
-    buffer_empty->full = 0;             // Nenhum item no buffer no início
-    buffer_empty->empty = BUFFER_SIZE;  // Buffer está completamente vazio
-
-    buffer_full->count = 0;             // Nenhum item no buffer no início
-    buffer_full->full = 0;              // Nenhum item completo
-    buffer_full->empty = BUFFER_SIZE;   // Espaço máximo disponível
-
-    // Inicializa o mutex
-    m->value = 1;  // Mutex começa desbloqueado (disponível para uso)
-}
 
 // Função de espera (down/P) - decrementa o semáforo e bloqueia se o valor for zero
 void sem_signal(sem_t *s, sem_mutex_t *m) {

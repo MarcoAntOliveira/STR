@@ -1,0 +1,59 @@
+#include <stdint.h>
+#include <chrono>
+#include <iostream>
+#include <queue>
+#include <thread>
+#include "miros.h"
+#include "rm.h"
+#include "sem.h"
+#include "sem_mutex.h"
+
+sem_mutex_t *m;  // Mutex global para proteger acesso à fila
+
+int main() {
+    // Criação da fila de prioridades com comparação de maior prioridade por menor período
+    std::priority_queue<Tarefa, std::vector<Tarefa>, std::greater<Tarefa>> fila_prioridades;
+
+    // Inicializa o mutex
+    m = sem_create(1);  // Mutex inicializado com valor 1 para simular um mutex binário
+
+    // Adiciona as tarefas com diferentes períodos e prioridades
+    fila_prioridades.emplace(1, 100, 1, 100);  // Tarefa 1
+    fila_prioridades.emplace(2, 200, 2, 200);  // Tarefa 2
+    fila_prioridades.emplace(3, 300, 3, 300);  // Tarefa 3
+
+    Escalonador escalonador;
+
+    // Loop de escalonamento
+    while (true) {
+        // Bloqueia o mutex para acessar a fila de prioridades
+        sem_wait(m);
+
+        Tarefa tarefa = fila_prioridades.top();  // Seleciona a tarefa de maior prioridade
+        fila_prioridades.pop();
+
+        // Libera o mutex após acessar a fila
+        sem_signal(m);
+
+        auto agora = std::chrono::steady_clock::now();
+
+        // Verifica se é hora de executar a tarefa
+        if (tarefa.proxima_execucao <= agora) {
+            executar_tarefa(tarefa);  // Executa a tarefa
+            tarefa.atualizar_proxima_execucao();
+        }
+
+        // Bloqueia o mutex para atualizar a fila
+        sem_wait(m);
+        fila_prioridades.push(tarefa);  // Reinsere a tarefa com o tempo atualizado
+        sem_signal(m);
+
+        // Balanceia a carga das tarefas entre núcleos
+        escalonador.balancearCarga();
+
+        // Intervalo de espera do escalonador
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+
+    return 0;
+}

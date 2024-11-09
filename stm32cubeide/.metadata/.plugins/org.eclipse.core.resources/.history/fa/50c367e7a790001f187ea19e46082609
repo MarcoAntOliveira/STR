@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <pthread.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+#define NUM_TAREFAS 3
+
+// Estrutura para definir as tarefas
+typedef struct {
+    int id;
+    int periodo;  // Tempo de período da tarefa
+    int tempo_exec; // Tempo de execução da tarefa
+    int restante_exec; // Tempo restante de execução da tarefa
+    pthread_t thread_id;
+} Tarefa;
+
+pthread_mutex_t lock; // Mutex para proteger as seções críticas
+
+// Função que cada tarefa executará
+void* executar_tarefa(void* arg) {
+    Tarefa* tarefa = (Tarefa*)arg;
+    while (1) {
+        pthread_mutex_lock(&lock); // Proteger o acesso
+        if (tarefa->restante_exec > 0) {
+            tarefa->restante_exec--;
+            printf("Executando tarefa %d\n", tarefa->id);
+        }
+        pthread_mutex_unlock(&lock); // Liberar o mutex
+        sleep(1); // Simula o tempo de execução
+    }
+    return NULL;
+}
+
+// Função para verificar se uma tarefa está pronta para ser executada
+int tarefa_pronta(Tarefa *tarefa, int tempo_atual) {
+    return (tempo_atual % tarefa->periodo == 0);
+}
+
+int main() {
+    pthread_mutex_init(&lock, NULL);
+
+    Tarefa tarefas[NUM_TAREFAS] = {
+        {1, 3, 1, 1},
+        {2, 5, 2, 2},
+        {3, 8, 3, 3}
+    };
+
+    // Criar threads para cada tarefa
+    for (int i = 0; i < NUM_TAREFAS; i++) {
+        pthread_create(&tarefas[i].thread_id, NULL, executar_tarefa, &tarefas[i]);
+    }
+
+    int tempo_total = 20; // Simulação de tempo
+    int tempo_atual;
+
+    for (tempo_atual = 0; tempo_atual < tempo_total; tempo_atual++) {
+        printf("\nTempo: %d\n", tempo_atual);
+
+        // Iterar sobre as tarefas e verificar se estão prontas
+        pthread_mutex_lock(&lock);
+        for (int i = 0; i < NUM_TAREFAS; i++) {
+            if (tarefa_pronta(&tarefas[i], tempo_atual)) {
+                tarefas[i].restante_exec = tarefas[i].tempo_exec;
+            }
+        }
+        pthread_mutex_unlock(&lock);
+
+        sleep(1); // Simula 1 unidade de tempo
+    }
+
+    // Finalizar threads (nunca alcançado aqui, mas em uma aplicação real seria necessário)
+    for (int i = 0; i < NUM_TAREFAS; i++) {
+        pthread_join(tarefas[i].thread_id, NULL);
+    }
+
+    pthread_mutex_destroy(&lock);
+    return 0;
+}

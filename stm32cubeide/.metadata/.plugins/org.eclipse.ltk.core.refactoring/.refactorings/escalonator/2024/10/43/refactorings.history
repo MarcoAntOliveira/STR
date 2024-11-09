@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;rm.h&apos; to &apos;Inc&apos;" description="Move &apos;rm.h&apos; to &apos;Inc&apos;" destination="escalonator-str/Inc" element1="escalonator-str/Src/rm.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1729775720882" updateReferences="true"/>
+</session>

@@ -1,0 +1,64 @@
+10:14:16 **** Incremental Build of configuration Debug for project str-miros-stm32f103 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"/home/marcos/projects/stm32cubeide/escalonator/str-miros-stm32f103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"/home/marcos/projects/stm32cubeide/escalonator/str-miros-stm32f103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"/home/marcos/projects/stm32cubeide/escalonator/str-miros-stm32f103/Drivers/CMSIS/Include" -I"/home/marcos/projects/stm32cubeide/escalonator/str-miros-stm32f103/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/rm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I"/home/marcos/projects/stm32cubeide/escalonator/str-miros-stm32f103/Drivers/STM32F1xx_HAL_Driver/Inc" -I"/home/marcos/projects/stm32cubeide/escalonator/str-miros-stm32f103/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"/home/marcos/projects/stm32cubeide/escalonator/str-miros-stm32f103/Drivers/CMSIS/Include" -I"/home/marcos/projects/stm32cubeide/escalonator/str-miros-stm32f103/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/rm.d" -MT"Src/rm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/rm.o"
+../Src/main.c: In function 'main':
+../Src/main.c:12:12: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'tarefas'
+   12 |     Tarefa tarefas[NUM_TAREFAS] = {
+      |            ^~~~~~~
+../Src/main.c:12:12: error: 'tarefas' undeclared (first use in this function)
+../Src/main.c:12:12: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:12:20: error: 'NUM_TAREFAS' undeclared (first use in this function)
+   12 |     Tarefa tarefas[NUM_TAREFAS] = {
+      |                    ^~~~~~~~~~~
+../Src/main.c:12:35: error: expected expression before '{' token
+   12 |     Tarefa tarefas[NUM_TAREFAS] = {
+      |                                   ^
+../Src/main.c:24:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   24 |         printf("\nTempo: %d\n", tempo_atual);
+      |         ^~~~~~
+../Src/main.c:5:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    4 | #include "sem.h"
+  +++ |+#include <stdio.h>
+    5 | 
+../Src/main.c:24:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   24 |         printf("\nTempo: %d\n", tempo_atual);
+      |         ^~~~~~
+../Src/main.c:24:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Src/main.c:27:9: warning: implicit declaration of function 'pthread_mutex_lock' [-Wimplicit-function-declaration]
+   27 |         pthread_mutex_lock(&lock);
+      |         ^~~~~~~~~~~~~~~~~~
+../Src/main.c:27:29: error: 'lock' undeclared (first use in this function)
+   27 |         pthread_mutex_lock(&lock);
+      |                             ^~~~
+../Src/main.c:29:17: warning: implicit declaration of function 'tarefa_pronta' [-Wimplicit-function-declaration]
+   29 |             if (tarefa_pronta(&tarefas[i], tempo_atual)) {
+      |                 ^~~~~~~~~~~~~
+../Src/main.c:33:9: warning: implicit declaration of function 'pthread_mutex_unlock' [-Wimplicit-function-declaration]
+   33 |         pthread_mutex_unlock(&lock);
+      |         ^~~~~~~~~~~~~~~~~~~~
+../Src/main.c:35:9: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   35 |         sleep(1); // Simula 1 unidade de tempo
+      |         ^~~~~
+../Src/main.c:40:9: warning: implicit declaration of function 'pthread_join' [-Wimplicit-function-declaration]
+   40 |         pthread_join(tarefas[i].thread_id, NULL);
+      |         ^~~~~~~~~~~~
+../Src/main.c:40:44: error: 'NULL' undeclared (first use in this function)
+   40 |         pthread_join(tarefas[i].thread_id, NULL);
+      |                                            ^~~~
+../Src/main.c:5:1: note: 'NULL' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+    4 | #include "sem.h"
+  +++ |+#include <stddef.h>
+    5 | 
+../Src/main.c:43:5: warning: implicit declaration of function 'pthread_mutex_destroy' [-Wimplicit-function-declaration]
+   43 |     pthread_mutex_destroy(&lock);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+../Src/main.c:8:22: warning: unused variable 'm' [-Wunused-variable]
+    8 |         sem_mutex_t *m;
+      |                      ^
+make: *** [Src/subdir.mk:46: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+10:14:16 Build Failed. 8 errors, 9 warnings. (took 220ms)
+
