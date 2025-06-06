@@ -1,12 +1,8 @@
 ## Sistemas de Tempo Real
-Não é possível criar, editar ou fazer upload de arquivos … 
-Se o armazenamento estiver cheio por mais de 2 anos, seus arquivos poderão ser excluídos do Drive e do Google Fotos.
+
 
 # Sistemas de tempo real (STR)
 
-[TOC]
-
-## Read Me
 
 Criei esse documento para servir como um guia completo da teoria estudada nas aulas de Sistemas de tempo real. A idéia não é ser um Resumão, e sim, abordar cada detalhe para a compreensão do assunto.
 
